@@ -333,7 +333,7 @@ abstract class SymbolTable extends macros.Universe
     def newWeakMap[K, V]()        = recordCache(mutable.WeakHashMap[K, V]())
     def newMap[K, V]()            = recordCache(mutable.HashMap[K, V]())
     def newSet[K]()               = recordCache(mutable.HashSet[K]())
-    def newWeakSet[K <: AnyRef]() = recordCache(new WeakHashSet[K]())
+    def newWeakSet[K <: AnyRef]() = recordCache(new mutable.WeakHashSet[K]())
   }
 
   /** The set of all installed infotransformers. */

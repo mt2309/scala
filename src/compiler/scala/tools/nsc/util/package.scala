@@ -8,6 +8,7 @@ package tools
 package nsc
 
 import java.io.{ OutputStream, PrintStream, ByteArrayOutputStream, PrintWriter, StringWriter }
+import collection.mutable
 
 package object util {
 
@@ -93,7 +94,7 @@ package object util {
   type TableDef[T] = scala.reflect.internal.util.TableDef[T]
 
   @deprecated("scala.reflect.internal.util.WeakHashSet", "2.10.0")
-  type WeakHashSet[T <: AnyRef] = scala.reflect.internal.util.WeakHashSet[T]
+  type WeakHashSet[T <: AnyRef] = mutable.WeakHashSet[T]
 
   @deprecated("Moved to scala.reflect.internal.util.Position", "2.10.0")
   val Position = scala.reflect.internal.util.Position
